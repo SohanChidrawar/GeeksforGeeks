@@ -12,7 +12,7 @@ Output: 31
 // 35, 36, 37, 38, 39, 43 contain digit
 */
 
------------------------------------------------------------------------------------------------------------------------------------------------
+// -----------------------------------------------------------------------------------------------------------------------------------------------
 /*
 LOGIC:
 1. if n is less than 3, return n.
@@ -24,6 +24,8 @@ LOGIC:
   count(n % po): This counts the numbers formed by the digits after the MSD, which is count(5) because it looks at the number 5.
 6. If the MSD is equal to 3, it means we need to count numbers differently. In this case, it recursively calls count(msd po- 1).
 */
+
+ // -----------------------------------------------------------------------------------------------------------------------------------------------
 
 #include<stdio.h>
 #include<iostream>
