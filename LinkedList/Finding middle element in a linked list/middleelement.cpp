@@ -6,7 +6,6 @@ If there are two middle nodes(in case, when N is even), print the second middle 
 For example, if the linked list given is 1->2->3->4->5->6, then the middle node of the list is 4.
 */
 
-
 /* Link list Node 
 struct Node {
     int data;
@@ -43,5 +42,28 @@ class Solution{
             ptr=ptr->next;
         }
         return ptr->data;
+    }
+};
+
+
+//---------------------------OR---------------------------------------------------//
+
+class Solution{
+ public:
+int getMiddle(Node *head)
+    {
+        struct Node *slow, *fast;
+        slow=head;
+        fast=head;
+        if(head==NULL)
+        {
+            return -1;
+        }
+        while(fast!=NULL && fast->next!=NULL)
+        {
+            slow=slow->next;
+            fast=fast->next->next;
+        }
+        return slow->data;
     }
 };
