@@ -1,5 +1,5 @@
 def reArrange(self, arr, N):
-        # code here 
+        # Separate even and odd numbers
         even=[]
         odd=[]
         
@@ -19,7 +19,8 @@ def reArrange(self, arr, N):
             i+=1
             result.append(odd[j])
             j+=1
-            
+        
+         # Add remaining even and odd numbers to the result array
         result.extend(even[1:N])
         result.extend(odd[1:N])
         
